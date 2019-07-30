@@ -10,6 +10,7 @@ private:
 	float mass;
 	float velocity;
 	float thrust;
+	float fuel;
 
 	Vect2f position;
 
