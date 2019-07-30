@@ -3,9 +3,6 @@
 
 
 
-
-
-
 Ship::Ship(Vect2f vec)
 {
 
@@ -23,10 +20,19 @@ void Ship::set_mass(float x)
 
 
 }
-void Ship::set_velocity(float x)
+void Ship::set_velocity(float x, float y)
 {
 
-	velocity = x;
+	velocity.set_x(x);
+
+	velocity.set_y(y);
+
+}
+
+void Ship::set_direction(float i, float j)
+{
+	direction.set_x(i);
+	direction.set_y(i);
 
 }
 
@@ -38,10 +44,18 @@ float Ship::get_mass()
 	return mass;
 
 }
-float Ship::get_velocity()
+
+Vect2f Ship::get_velocity()
 {
 
 	return velocity;
+
+}
+
+Vect2f Ship::get_direction()
+{
+
+	return direction;
 
 }
 

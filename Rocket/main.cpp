@@ -4,13 +4,14 @@
 #include "World.h"
 
 #define G 6.67408E-11f
-#define PI 3.1515926535
+#define PI 3.1515926535f
 
 
 int main() {
 
 
-
+	float a = 0;
+	float b = 0;
 	//Vect2f pos(10.f, 20.f);
 	
 
@@ -59,7 +60,11 @@ int main() {
 
 	for (int i = 0; i < 100; i++)
 	{
-		suzy_q.set_position(i, i);
+		
+
+		a += i + 2;
+		b += i + 3;
+		suzy_q.set_position(a, b);
 		suzy_q.show_position();
 
 	}

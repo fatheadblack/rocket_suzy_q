@@ -8,12 +8,12 @@ class Ship {
 
 private:
 	float mass;
-	float velocity;
 	float thrust;
 	float fuel;
 
 	Vect2f position;
-
+	Vect2f direction;
+	Vect2f velocity;
 
 public:
 
@@ -21,12 +21,19 @@ public:
 	Ship(Vect2f vec);
 
 	void set_mass(float x);
-	void set_velocity(float x);
-	float get_mass();
-	float get_velocity();
+	void set_velocity(float x, float y);
 	void set_position(float a, float b);
-	Vect2f get_position();
+	void set_direction(float i, float j);
+
 	void show_position();
+
+	float get_mass();
+
+
+	Vect2f get_velocity();
+	Vect2f get_position();
+	Vect2f get_direction();
+
 
 
 
