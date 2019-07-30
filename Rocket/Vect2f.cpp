@@ -9,6 +9,20 @@ Vect2f::Vect2f(float a, float b)
 
 }
 
+void Vect2f::set_x(float a)
+{
+
+	x = a;
+
+}
+
+void Vect2f::set_y(float b)
+{
+
+	y = b;
+
+}
+
 float Vect2f::get_x()
 {
 

@@ -11,10 +11,10 @@ int main() {
 
 
 
-	Vect2f pos(10.f, 20.f);
+	//Vect2f pos(10.f, 20.f);
 	
 
-	Ship Suzy_q(pos);
+	Ship suzy_q;
 
 
 	World earth;
@@ -59,8 +59,9 @@ int main() {
 
 	for (int i = 0; i < 100; i++)
 	{
+		suzy_q.set_position(i, i);
+		suzy_q.show_position();
 
-		//std::cout << Suzy_q.get_position() << " " << Suzy_q.get_position() << std::endl;
 	}
 
 

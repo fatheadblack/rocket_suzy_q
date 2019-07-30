@@ -1,4 +1,7 @@
+#include<iostream>
 #include "Ship.h"
+
+
 
 
 
@@ -42,10 +45,26 @@ float Ship::get_velocity()
 
 }
 
+
+void Ship::set_position(float a, float b)
+{
+
+	position.set_x(a);
+	position.set_y(b);
+
+}
+
 Vect2f Ship::get_position()
 {
 
 	return position;
 
+
+}
+
+void Ship::show_position()
+{
+
+	std::cout << " Ships x position : " << position.get_x() << " Ships y position : " << position.get_y() << std::endl;
 
 }

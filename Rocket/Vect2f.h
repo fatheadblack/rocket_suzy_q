@@ -12,6 +12,9 @@ public:
 
 	Vect2f(float a, float b);
 
+	void set_x(float a);
+	void set_y(float b);
+
 	float get_x();
 	
 
