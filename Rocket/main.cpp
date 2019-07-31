@@ -14,9 +14,19 @@ int main() {
 	float b = 0;
 	//Vect2f pos(10.f, 20.f);
 	
-	// temporary height equation
-	float dt = 0.1;
+	// for temporary height equation
+	float dt = 0.0f;
 	float height = 0;
+
+	// for temporay velocity equation
+	float vel = 0;
+
+	// for second height equation
+
+	float  height_check = 0;
+	float height_check_u = 0;
+	float height_check_v = 0;
+
 
 	//height = vt - -.5f * vt^2
 
@@ -65,12 +75,22 @@ int main() {
 
 	for (int i = 0; i < 100; i++)
 	{
-		height = (100 * dt) - (0.5 * G * (dt * dt));
+		height_check_u = vel;
+		vel += 2.0f * dt;
+		height_check_v = vel;
+
+		height_check = (height_check_u + height_check_v) / 2  * dt;
+
+		height = (vel * dt) - (0.5 * 2.0 * (dt * dt));
+
+		suzy_q.set_velocity(0,vel);
 		suzy_q.set_height(height);
 
 		dt += 0.5;
 
-		std::cout << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+		std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+
+		std::cout << "Height Check : " << height_check << std::endl;
 
 		/*a += i + 2;
 		b += i + 3;
