@@ -10,6 +10,7 @@ private:
 	float mass;
 	float thrust;
 	float fuel;
+	float height;
 
 	Vect2f position;
 	Vect2f direction;
@@ -24,11 +25,12 @@ public:
 	void set_velocity(float x, float y);
 	void set_position(float a, float b);
 	void set_direction(float i, float j);
+	void set_height(float h);
 
 	void show_position();
 
 	float get_mass();
-
+	float get_height();
 
 	Vect2f get_velocity();
 	Vect2f get_position();

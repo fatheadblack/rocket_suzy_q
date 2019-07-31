@@ -36,6 +36,23 @@ void Ship::set_direction(float i, float j)
 
 }
 
+void Ship::set_position(float a, float b)
+{
+
+	position.set_x(a);
+	position.set_y(b);
+
+}
+
+
+void Ship::set_height(float h)
+{
+
+	height = h;
+}
+
+
+
 
 float Ship::get_mass()
 
@@ -60,19 +77,20 @@ Vect2f Ship::get_direction()
 }
 
 
-void Ship::set_position(float a, float b)
-{
 
-	position.set_x(a);
-	position.set_y(b);
-
-}
 
 Vect2f Ship::get_position()
 {
 
 	return position;
 
+
+}
+
+float Ship::get_height()
+{
+
+	return height;
 
 }
 

@@ -14,6 +14,11 @@ int main() {
 	float b = 0;
 	//Vect2f pos(10.f, 20.f);
 	
+	// temporary height equation
+	float dt = 0.1;
+	float height = 0;
+
+	//height = vt - -.5f * vt^2
 
 	Ship suzy_q;
 
@@ -60,12 +65,19 @@ int main() {
 
 	for (int i = 0; i < 100; i++)
 	{
-		
+		height = (100 * dt) - (0.5 * G * (dt * dt));
+		suzy_q.set_height(height);
 
-		a += i + 2;
+		dt += 0.5;
+
+		std::cout << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+
+		/*a += i + 2;
 		b += i + 3;
 		suzy_q.set_position(a, b);
-		suzy_q.show_position();
+		suzy_q.show_position();*/
+
+
 
 	}
 
