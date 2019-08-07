@@ -73,22 +73,22 @@ int main() {
 
 	
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 500; i++)
 	{
 		height_check_u = vel;
-		vel += 2.0f * dt;
+		vel += 4.0f * dt;
 		height_check_v = vel;
 
 		height_check = (height_check_u + height_check_v) / 2  * dt;
 
-		height = (vel * dt) - (0.5 * 2.0 * (dt * dt));
+		height = (vel * dt) - (0.5 * 4.0 * (dt * dt));
 
 		suzy_q.set_velocity(0,vel);
 		suzy_q.set_height(height);
 
-		dt += 0.5;
+		dt += 0.1;
 
-		std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+		std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << "After " << dt << " seconds " << std::endl;
 
 		std::cout << "Height Check : " << height_check << std::endl;
 
