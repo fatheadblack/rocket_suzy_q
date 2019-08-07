@@ -69,7 +69,7 @@ int main() {
 	std::cout << "escape velocity on moon " << moon_escv << " m s^-1 " << std::endl;
 
 
-	std::cout << "volume of the earth " << earth_vol << std::endl;
+	//std::cout << "volume of the earth " << earth_vol << std::endl;
 
 	
 
