@@ -18,7 +18,7 @@ private:
 
 public:
 
-	Ship() = default;
+	Ship();
 	Ship(Vect2f vec);
 
 	void set_mass(float x);

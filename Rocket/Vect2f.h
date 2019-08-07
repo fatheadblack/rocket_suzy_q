@@ -4,11 +4,13 @@
 class Vect2f
 {
 
-public:
+private:
 
 	float x, y; // x and y co-ordinates
 
-	Vect2f() = default;
+public:
+
+	Vect2f();
 
 	Vect2f(float a, float b);
 

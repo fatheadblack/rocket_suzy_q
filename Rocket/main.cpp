@@ -12,7 +12,7 @@ int main() {
 
 	float a = 0;
 	float b = 0;
-	//Vect2f pos(10.f, 20.f);
+	Vect2f pos(10.f, 20.f);
 	
 	// for temporary height equation
 	float dt = 0.0f;
@@ -23,14 +23,15 @@ int main() {
 
 	// for second height equation
 
-	float  height_check = 0;
+	float height_check = 0;
 	float height_check_u = 0;
 	float height_check_v = 0;
 
 
 	//height = vt - -.5f * vt^2
 
-	Ship suzy_q;
+	//Ship suzy_q;
+	Ship temp(pos);
 
 
 	World earth;
@@ -83,21 +84,23 @@ int main() {
 
 		height = (vel * dt) - (0.5 * 2.0 * (dt * dt));
 
-		suzy_q.set_velocity(0,vel);
-		suzy_q.set_height(height);
+		//suzy_q.set_velocity(0,vel);
+		//suzy_q.set_height(height);
 
 		dt += 0.5;
 
-		std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+		//std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
 
 		std::cout << "Height Check : " << height_check << std::endl;
+
+		//std::cout << "Check for random values : "  << suzy_q.get_mass() << " " << suzy_q.get_direction().get_x() << std::endl;
 
 		/*a += i + 2;
 		b += i + 3;
 		suzy_q.set_position(a, b);
 		suzy_q.show_position();*/
 
-
+		std::cout << temp.get_mass() << " " << temp.get_direction().get_x() << " " << temp.get_position().get_y() << std::endl;
 
 	}
 

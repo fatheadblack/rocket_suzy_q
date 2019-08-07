@@ -3,11 +3,32 @@
 
 
 
-Ship::Ship(Vect2f vec)
+
+
+Ship::Ship()
 {
 
-	position = vec;
+	mass = 0.f;
+	thrust = 0.f;
+	fuel = 0.f;
+	height = 0.f;
 
+	Vect2f position;
+	Vect2f direction;
+	Vect2f velocity;
+
+
+	std::cout << "ship default constructor" << std::endl;
+
+
+}
+
+
+
+Ship::Ship(Vect2f vec) : Ship()
+{
+	std::cout << "ship vect2 constructor" << std::endl;
+	position = vec;
 
 }
 

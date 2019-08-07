@@ -1,6 +1,18 @@
 #include "Vect2f.h"
 
 
+
+Vect2f::Vect2f()
+{
+
+	x = 0.f;
+	y = 0.f;
+
+
+}
+
+
+
 Vect2f::Vect2f(float a, float b)
 {
 
