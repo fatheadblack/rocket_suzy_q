@@ -6,13 +6,13 @@
 #define G 6.67408E-11f
 #define PI 3.1515926535f
 
-
+// TEST
 int main() {
 
 
 	float a = 0;
 	float b = 0;
-	Vect2f pos(10.f, 20.f);
+	//Vect2f pos(10.f, 20.f);
 	
 	// for temporary height equation
 	float dt = 0.0f;
@@ -23,15 +23,14 @@ int main() {
 
 	// for second height equation
 
-	float height_check = 0;
+	float  height_check = 0;
 	float height_check_u = 0;
 	float height_check_v = 0;
 
 
 	//height = vt - -.5f * vt^2
 
-	//Ship suzy_q;
-	Ship temp(pos);
+	Ship suzy_q;
 
 
 	World earth;
@@ -70,37 +69,35 @@ int main() {
 	std::cout << "escape velocity on moon " << moon_escv << " m s^-1 " << std::endl;
 
 
-	std::cout << "volume of the earth " << earth_vol << std::endl;
+	//std::cout << "volume of the earth " << earth_vol << std::endl;
 
 	
 
-	for (int i = 0; i < 100; i++)
+	for (int i = 0; i < 500; i++)
 	{
 		height_check_u = vel;
-		vel += 2.0f * dt;
+		vel += 4.0f * dt;
 		height_check_v = vel;
 
 		height_check = (height_check_u + height_check_v) / 2  * dt;
 
-		height = (vel * dt) - (0.5 * 2.0 * (dt * dt));
+		height = (vel * dt) - (0.5 * 4.0 * (dt * dt));
 
-		//suzy_q.set_velocity(0,vel);
-		//suzy_q.set_height(height);
+		suzy_q.set_velocity(0,vel);
+		suzy_q.set_height(height);
 
-		dt += 0.5;
+		dt += 0.1;
 
-		//std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << std::endl;
+		std::cout << "Velocity of Suzy_q : " << suzy_q.get_velocity().get_y() << " Height of Suzy_q : " << suzy_q.get_height() << "After " << dt << " seconds " << std::endl;
 
 		std::cout << "Height Check : " << height_check << std::endl;
-
-		//std::cout << "Check for random values : "  << suzy_q.get_mass() << " " << suzy_q.get_direction().get_x() << std::endl;
 
 		/*a += i + 2;
 		b += i + 3;
 		suzy_q.set_position(a, b);
 		suzy_q.show_position();*/
 
-		std::cout << temp.get_mass() << " " << temp.get_direction().get_x() << " " << temp.get_position().get_y() << std::endl;
+
 
 	}
 
